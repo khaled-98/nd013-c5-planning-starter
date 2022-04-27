@@ -13,7 +13,7 @@
 #include <array>
 
 // Planning Constants
-#define P_NUM_PATHS 1                  // TODO - Num of paths (goals)
+#define P_NUM_PATHS 10
 #define P_LOOKAHEAD_MIN 8.0            // m
 #define P_LOOKAHEAD_MAX 20.0           // m
 #define P_LOOKAHEAD_TIME 1.5           // s
@@ -28,12 +28,12 @@
 #define P_REQ_STOPPED_TIME 1.0         // secs
 #define P_LEAD_VEHICLE_LOOKAHEAD 20.0  // m
 #define P_REACTION_TIME 0.25           // secs
-#define P_NUM_POINTS_IN_SPIRAL 2       // TODO - Num of points in the spiral
+#define P_NUM_POINTS_IN_SPIRAL 30
 #define P_STOP_THRESHOLD_DISTANCE \
   P_LOOKAHEAD_MIN / P_NUM_POINTS_IN_SPIRAL * 2  // m
 
-constexpr std::array<float, 3> CIRCLE_OFFSETS = {-1.0, 1.0, 3.0};  // m
-constexpr std::array<float, 3> CIRCLE_RADII = {1.5, 1.5, 1.5};     // m
+constexpr std::array<float, 3> CIRCLE_OFFSETS = {-1.0, 1.0, 0.0};  // m
+constexpr std::array<float, 3> CIRCLE_RADII = {1.0, 1.0, 1.0};     // m
 
 constexpr double dt = 0.05;
 // Standard deviation parameters for x, x_dot, x_double_dot
